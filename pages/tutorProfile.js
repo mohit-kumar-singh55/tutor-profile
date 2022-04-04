@@ -15,7 +15,7 @@ function TutorProfile() {
       <Schedule />
       <Resume />
       <Subject />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
