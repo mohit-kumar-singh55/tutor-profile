@@ -4,7 +4,7 @@ import WhatsAppTree from "../../icons/WhatsAppTree";
 
 const ProfilePhotoPopUp = () => {
     return (
-        <div className='flex flex-col p-6 items-center justify-center gap-10 bg-[#FFFFFF] w-[652px] h-[373px] relative font-roboto rounded-xl shadow-2xl'>
+        <div className='flex flex-col p-6 items-center justify-center gap-10 bg-[#FFFFFF] w-[640px] h-[350px] relative font-roboto rounded-xl shadow-2xl'>
             <WhatsAppTree styles='absolute' />
 
             <div className='flex flex-col items-center justify-between h-full w-full'>
@@ -45,7 +45,7 @@ const TopTitle = () => {
 // Upload Box
 const UploadBox = () => {
     return (
-        <div className='flex items-center justify-center w-[246px] h-[246px] border-[0.8px] border-[#7E7E7E] border-dashed'>
+        <div className='flex items-center justify-center w-[240px] h-[240px] border-[0.8px] border-[#7E7E7E] border-dashed'>
             <div className='flex items-center gap-3 flex-col text-center font-bold'>
                 <p className='text-[#838383] text-[14px]'>
                     Drag And Drop Your Photo Here
