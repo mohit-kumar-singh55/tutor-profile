@@ -45,7 +45,7 @@ const TopTitle = () => {
 // Upload Box
 const UploadBox = () => {
     return (
-        <div className='flex items-center justify-center w-[240px] h-[240px] border-[0.8px] border-[#7E7E7E] border-dashed shadow-xl'>
+        <div className='flex items-center justify-center w-[240px] h-[240px] border-[0.8px] border-[#7E7E7E] border-dashed'>
             <div className='flex items-center gap-3 flex-col text-center font-bold'>
                 <p className='text-[#838383] text-[14px]'>
                     Drag And Drop Your Photo Here
