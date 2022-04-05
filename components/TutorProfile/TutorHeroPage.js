@@ -79,7 +79,7 @@ const UserImage = () => {
 
 const ProfileChip = () => {
   return (
-    <div className='flex items-center justify-between absolute bottom-[100px] left-[60px] sm:w-[300px] sm:-h-[60px] w-[216px] h-[40px] bg-[#FFFFFF] rounded-full px-4 py-2 font-roboto'>
+    <div className='flex items-center justify-between absolute bottom-[100px] left-[60px] sm:w-[300px] sm:-h-[60px] w-[216px] h-[40px] bg-[#FFFFFF] rounded-full px-4 py-2 font-roboto shadow-xl'>
       <div>
         <svg width="5" height="20" viewBox="0 0 5 29" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="2.5" cy="2.5" r="2.5" fill="#FC4D6D" />

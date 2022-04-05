@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import StarFilled from "../../icons/StarFilled";
 import StarEmpty from "../../icons/StarEmpty";
 
 const Reviews = () => {
+    const [showReview, setShowReview] = useState(0);     // storing index of reviews array
+    const [review, setReview] = useState({});
+
     const reviews = [
         { title: 'Teaches Concepts in Depth', desc: 'I had been dreaming to learn guitar for 4 yrs. One day I visited Peppertree.com. I clicked "Buy a Trial Session". Later all happened automatically, I kept attending the amazing tutor online and she kept me motivated. It&apos;s been 4 weeks & 40 sessions.And woohoo! I just surprised all my friends at a party with my skills! Stop desiring a skill, just start with Peppertree!' },
-        {title:'having fun',desc:'slkdjflnsd fsdjf ljsdlkfj lksdj fjsdlkjf lkjsdflj ldjsnfhuohhweouhjwsh fhjdsjklfouwhjfhsjdfhj sdjfh. dshf dslfjlsdj foijudsojf jhsdjkfh jsdhjufhsjfhjsd.'},
-        {title:'Yo Yo Yo',desc:'sdkjfksdj fsjdfkj sskljdfjsdlkfjoiwejhwohjshd. dshf kjsdhkjfh hsdoufyhowuejhfuiwah fhskjdhfjshjfhw98hqohskjfhkjshkdf hkshbhfdu ghksjndf jhsdjkfh'},
-        {title:'Sniper MKS',desc:'jjsahdfj jshfds khfdhsdkjlfjj slkjf jsfdhowhouhf. sjdfj hsjfoijweojjasjfljnl sjdfjlskjfljslhhuhwhnfjsah ljjsadjf kljsldkjf lsjdlfj isojdfoijs ksnfd  nfdsj fjsdlfjksld jksdjf'},
+        { title: 'having fun', desc: 'slkdjflnsd fsdjf ljsdlkfj lksdj fjsdlkjf lkjsdflj ldjsnfhuohhweouhjwsh fhjdsjklfouwhjfhsjdfhj sdjfh. dshf dslfjlsdj foijudsojf jhsdjkfh jsdhjufhsjfhjsd.' },
+        { title: 'Yo Yo Yo', desc: 'sdkjfksdj fsjdfkj sskljdfjsdlkfjoiwejhwohjshd. dshf kjsdhkjfh hsdoufyhowuejhfuiwah fhskjdhfjshjfhw98hqohskjfhkjshkdf hkshbhfdu ghksjndf jhsdjkfh' },
+        { title: 'Sniper MKS', desc: 'jjsahdfj jshfds khfdhsdkjlfjj slkjf jsfdhowhouhf. sjdfj hsjfoijweojjasjfljnl sjdfjlskjfljslhhuhwhnfjsah ljjsadjf kljsldkjf lsjdlfj isojdfoijs ksnfd  nfdsj fjsdlfjksld jksdjf' },
     ]
+
+    // showing review as per index clicked on balls
+    const showReviewFunction = (index) => {
+        setReview(reviews[index]);
+    }
+
+    useEffect(() => {
+        // initially it will show 0th index review
+        showReviewFunction(showReview);
+    }, [showReview])
 
     return (
         <div className='snap-fullPage h-[calc(100vh-79px)] flex flex-col items-center justify-evenly bg-[#FFF7F7]'>
             <TopHeading />
 
-            <ReviewContainer />
+            <ReviewContainer review={review} showReview={showReview} setShowReview={setShowReview} reviews={reviews} />
         </div>
     )
 }
@@ -54,10 +67,10 @@ const TopHeading = () => {
 }
 
 // Review Container
-const ReviewContainer = () => {
+const ReviewContainer = ({ review, showReview, setShowReview, reviews }) => {
     return (
-        <div className='flex flex-col items-center justify-between relative'>
-            <Review />
+        <div className='flex flex-col items-center justify-between relative gap-10'>
+            <Review review={review} />
             {/* gradientCircles */}
             <span className='gradientCircle w-[97.67px] h-[97.67px] -top-[25px] -left-[30px]' />
             <span className='gradientCircle w-[31.88px] h-[31.88px] top-[50px] right-[260px]' />
@@ -65,8 +78,11 @@ const ReviewContainer = () => {
             <span className='gradientCircle w-[244px] h-[244px] -bottom-[50px] -right-[60px]' />
 
             {/* dots */}
-            <div>
-                dots
+            <div className='flex items-center justify-center w-full gap-2'>
+                {/* no. of dots depands on length of reviews array */}
+                {reviews?.map((item, index) => (
+                    <span key={index} onClick={() => setShowReview(index)} className={`rounded-full w-[12px] h-[12px] cursor-pointer transition duration-300 ${showReview === index ? 'bg-[#FC4D6D]' : 'bg-[#C4C4C4]'}`} />
+                ))}
             </div>
         </div>
     )
@@ -74,7 +90,7 @@ const ReviewContainer = () => {
 
 
 // Reviews
-const Review = () => {
+const Review = ({ review }) => {
     return (
         <div className='flex flex-col relative items-center capitalize z-10 justify-center w-[1069px] h-[310px] min-w-[396px] min-h-fit sm:px-20 sm:py-8 px-4 py-2 shadow-2xl rounded-3xl backdrop-blur-xl gap-3 font-monts'>
             {/* quotes */}
@@ -85,7 +101,7 @@ const Review = () => {
             {/* title */}
             <div className='flex items-start gap-5 w-full'>
                 <h2 className='font-semibold text-[#383838] text-[20px] pl-2'>
-                    Teaches Concepts in Depth
+                    {review?.title}
                 </h2>
 
                 {/* stars */}
@@ -100,7 +116,7 @@ const Review = () => {
 
             {/* desc */}
             <p className='font-medium text-[#656565]'>
-                I had been dreaming to learn guitar for 4 yrs. One day I visited Peppertree.com. I clicked "Buy a Trial Session". Later all happened automatically, I kept attending the amazing tutor online and she kept me motivated. It's been 4 weeks & 40 sessions. And woohoo! I just surprised all my friends at a party with my skills! Stop desiring a skill, just start with Peppertree!
+                {review?.desc}
             </p>
 
             {/* quotes */}
