@@ -1,5 +1,6 @@
 import AboutTutor from '../components/TutorProfile/AboutTutor'
 import Resume from '../components/TutorProfile/Resume'
+import Reviews from '../components/TutorProfile/Reviews'
 import Schedule from '../components/TutorProfile/Schedule'
 import Subject from '../components/TutorProfile/Subject'
 import TutorHeroPage from '../components/TutorProfile/TutorHeroPage'
@@ -11,10 +12,11 @@ function TutorProfile() {
     <div className="full-page-snap-main">
       <TutorHeroPageMobile />
       <TutorHeroPage />
-      <AboutTutor />
-      <Schedule />
-      <Resume />
-      <Subject />
+      <Reviews />
+      {/* <AboutTutor /> */}
+      {/* <Schedule /> */}
+      {/* <Resume /> */}
+      {/* <Subject /> */}
       {/* <Footer /> */}
     </div>
   )
