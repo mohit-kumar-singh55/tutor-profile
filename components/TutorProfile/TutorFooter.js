@@ -114,7 +114,7 @@ const LinksAndLogo = () => {
 
 const SocialLinks = () => {
     return (
-        <div className='flex items-center justify-between w-[60%] sm:[50%] md:w-[30%] mx-auto'>
+        <div className='flex items-center justify-center w-full sm:gap-8 gap-6 mx-auto'>
             {/* phone */}
             <Link href='/'>
                 <div className='flex items-center justify-center rounded-full w-[40px] h-[40px] border-[3px] p-2 border-[#FC4D6D] cursor-pointer'>
