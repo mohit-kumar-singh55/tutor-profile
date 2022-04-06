@@ -61,7 +61,7 @@ const Description = () => {
     <div className='flex flex-col items-center justify-start w-full px-24 gap-5 text-center overflow-y-scroll max-h-[calc(100vh-100px)] font-poppins font-medium text-[#5F5F5F]'>
       {desc?.map((des, i) => (
         <div className='flex items-center w-full justify-center gap-[100px] text-center font-poppins font-medium text-[#5F5F5F]'>
-          <p>
+          <p cla>
             {des.duration}
           </p>
           <p>
