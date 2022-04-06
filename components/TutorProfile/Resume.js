@@ -2,7 +2,7 @@ import React from 'react';
 
 function Resume() {
   return (
-    <div className="snap-fullPage h-[calc(100vh-79px)] flex flex-col gap-5 items-start justify-start pt-4 font-poppins">
+    <div className="snap-fullPage h-[calc(100vh-79px)] flex flex-col gap-5 items-start justify-start pt-6 font-poppins">
       <ResumeTitle />
 
       {/* main */}
@@ -16,7 +16,7 @@ export default Resume;
 
 function ResumeTitle() {
   return (
-    <section className="space-y-2 mx-auto">
+    <section className="space-y-2 sm:mx-auto sm:p-0 pl-5">
       <h2 className="text-2xl font-semibold capitalize tracking-wide text-[#5F5F5F]">
         Resume
       </h2>

@@ -1,15 +1,45 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { PencilAltIcon } from "@heroicons/react/solid";
 
 function AboutTutor() {
   return (
     <div className="snap-fullPage mx-auto flex items-center justify-evenly flex-col">
+      <TopTitle />
 
+      {/* mainContainer */}
+      <main>
+        <Video />
+
+      </main>
     </div>
   )
 }
 
 export default AboutTutor;
+
+const TopTitle = () => {
+  return (
+    <div className='flex flex-col items-center justify-center gap-4 font-poppins capitalize tracking-wide'>
+      <p className='font-bold text-[#FC4D6D]'>
+        About us
+      </p>
+      <h2 className="text-2xl font-semibold text-[#5F5F5F]">
+        About the tutor
+      </h2>
+      <SmallLine />
+    </div>
+  )
+}
+
+function SmallLine() {
+  return (
+    <div className="flex h-[3px]">
+      <div className="w-[32px] rounded-full bg-[#FC4D6D]" />
+    </div>
+  )
+}
+
 
 function Video(props) {
   // overflow-hidden  rounded-xl bg-gradient-to-r from-[#FD4E6D] to-[#FDA02F] p-1
@@ -63,10 +93,12 @@ function Video(props) {
   )
 }
 
-function SmallLine() {
+const Description = () => {
   return (
-    <div className="flex h-[3px]">
-      <div className="w-[32px] rounded-full bg-[#FC4D6D]" />
+    <div className='flex flex-col items-end justify-center gap-4'>
+      <button className='flex items-center justify-center gap-2'>
+        Edit Description
+      </button>
     </div>
   )
 }
