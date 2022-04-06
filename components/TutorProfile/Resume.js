@@ -6,9 +6,8 @@ function Resume() {
       <ResumeTitle />
 
       {/* main */}
-      <div className='flex flex-col items-center mx-auto w-full max-w-full overflow-x-scroll gap-5'>
-        <Title />
-        <Description />
+      <div className='w-full overflow-x-scroll'>
+        <MainResume />
       </div>
     </div>
   )
@@ -17,7 +16,7 @@ export default Resume;
 
 function ResumeTitle() {
   return (
-    <section className="mx-0 space-y-2 md:mx-auto">
+    <section className="space-y-2 mx-auto">
       <h2 className="text-2xl font-semibold capitalize tracking-wide text-[#5F5F5F]">
         Resume
       </h2>
@@ -36,21 +35,8 @@ function SmallLine() {
   )
 }
 
-const Title = () => {
+const MainResume = () => {
   const titles = ['Duration', 'Type', 'Title/Designation', 'Institute'];
-
-  return (
-    <div className='flex items-center w-full justify-center gap-[250px] text-lg font-poppins font-medium text-[#5F5F5F]'>
-      {titles?.map((title, i) => (
-        <h3 key={i}>
-          {title}
-        </h3>
-      ))}
-    </div>
-  )
-}
-
-const Description = () => {
   const desc = [
     { duration: 'June 2016 - May 2018', type: 'Degree', title: 'M.A. (English Literature & Philosiphy)', institute: 'New Hamshire and Oxford College of Arts (London, UK)' },
     { duration: 'June 2016 - May 2020', type: 'Diploma', title: 'M.A. (English Literature & Philosiphy)', institute: 'New Hamshire and Oxford College of Arts (London, UK)' },
@@ -58,23 +44,30 @@ const Description = () => {
   ]
 
   return (
-    <div className='flex flex-col items-center justify-start w-full px-24 gap-5 text-center overflow-y-scroll max-h-[calc(100vh-100px)] font-poppins font-medium text-[#5F5F5F]'>
-      {desc?.map((des, i) => (
-        <div className='flex items-center w-full justify-center gap-[100px] text-center font-poppins font-medium text-[#5F5F5F]'>
-          <p cla>
-            {des.duration}
-          </p>
-          <p>
-            {des.type}
-          </p>
-          <p>
-            {des.title}
-          </p>
-          <p>
-            {des.institute}
-          </p>
-        </div>
+    <table className='w-full min-w-[1000px] overflow-scroll text-center font-poppins font-medium text-[#5F5F5F]'>
+      <tr className='h-16'>
+        {titles?.map((title, i) => (
+          <th key={i}>
+            {title}
+          </th>
+        ))}
+      </tr>
+      {desc?.map((dex, i) => (
+        <tr key={i} className={`h-16  ${i % 2 == 0 ? 'bg-[#FFF7F7]' : ''}`}>
+          <td className='w-[50px] whitespace-pre-wrap'>
+            {dex?.duration}
+          </td>
+          <td className='w-[50px] whitespace-pre-wrap'>
+            {dex?.type}
+          </td>
+          <td className='w-[50px] whitespace-pre-wrap'>
+            {dex?.title}
+          </td>
+          <td className='w-[50px] whitespace-pre-wrap'>
+            {dex?.institute}
+          </td>
+        </tr>
       ))}
-    </div>
+    </table>
   )
 }
