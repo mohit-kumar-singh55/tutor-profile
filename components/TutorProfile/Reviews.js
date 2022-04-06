@@ -94,7 +94,7 @@ const Review = ({ review }) => {
     return (
         <div className='flex flex-col relative items-center capitalize z-10 justify-center w-full h-full sm:px-20 sm:py-8 px-4 py-10 shadow-2xl rounded-3xl backdrop-blur-xl gap-3 font-monts'>
             {/* quotes */}
-            <svg className='absolute xl:top-[80px] xl:left-[45px] lg:top-[50px] lg:left-[45px] md:top-[50px] md:left-[45px] hidden md:inline-block' width="33" height="27" viewBox="0 0 33 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className='absolute xl:top-[55px] xl:left-[45px] lg:top-[50px] lg:left-[45px] md:top-[50px] md:left-[45px] hidden md:inline-block' width="33" height="27" viewBox="0 0 33 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.1003 13.3258C11.3552 13.8484 12.3249 14.6903 13.0094 15.8516C13.7509 16.9548 14.1217 18.2903 14.1217 19.8581C14.1217 21.9484 13.4657 23.6613 12.1538 24.9968C10.8418 26.3323 9.21618 27 7.27678 27C5.22331 27 3.5406 26.3323 2.22866 24.9968C0.916714 23.6613 0.260742 21.9484 0.260742 19.8581C0.260742 18.8129 0.374824 17.7968 0.602988 16.8097C0.888193 15.8226 1.40156 14.3419 2.1431 12.3677L6.67785 0H13.5228L10.1003 13.3258ZM28.2394 13.3258C29.4943 13.8484 30.4639 14.6903 31.1484 15.8516C31.89 16.9548 32.2607 18.2903 32.2607 19.8581C32.2607 21.9484 31.6048 23.6613 30.2928 24.9968C28.9809 26.3323 27.3552 27 25.4158 27C23.3623 27 21.6796 26.3323 20.3677 24.9968C19.0558 23.6613 18.3998 21.9484 18.3998 19.8581C18.3998 18.8129 18.5139 17.7968 18.742 16.8097C19.0272 15.8226 19.5406 14.3419 20.2821 12.3677L24.8169 0H31.6618L28.2394 13.3258Z" fill="#A7A7A7" />
             </svg>
 

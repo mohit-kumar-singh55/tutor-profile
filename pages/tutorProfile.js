@@ -5,7 +5,7 @@ import Schedule from '../components/TutorProfile/Schedule'
 import Subject from '../components/TutorProfile/Subject'
 import TutorHeroPage from '../components/TutorProfile/TutorHeroPage'
 import TutorHeroPageMobile from '../components/TutorProfile/TutorHeroPageMobile'
-import Footer from './../components/HomePage/Footer'
+import TutorFooter from "../components/TutorProfile/TutorFooter";
 
 function TutorProfile() {
   return (
@@ -17,7 +17,7 @@ function TutorProfile() {
       {/* <Schedule /> */}
       {/* <Resume /> */}
       {/* <Subject /> */}
-      {/* <Footer /> */}
+      <TutorFooter />
     </div>
   )
 }
