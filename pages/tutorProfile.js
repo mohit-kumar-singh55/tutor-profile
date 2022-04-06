@@ -15,7 +15,7 @@ function TutorProfile() {
       <Reviews />
       {/* <AboutTutor /> */}
       {/* <Schedule /> */}
-      {/* <Resume /> */}
+      <Resume />
       {/* <Subject /> */}
       <TutorFooter />
     </div>
