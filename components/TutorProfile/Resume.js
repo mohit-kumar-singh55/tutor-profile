@@ -45,7 +45,7 @@ const MainResume = () => {
 
   return (
     <table className='w-full min-w-[1000px] overflow-scroll text-center font-poppins font-medium text-[#5F5F5F]'>
-      <tr className='h-16'>
+      <tr className='h-20'>
         {titles?.map((title, i) => (
           <th key={i}>
             {title}
@@ -53,7 +53,7 @@ const MainResume = () => {
         ))}
       </tr>
       {desc?.map((dex, i) => (
-        <tr key={i} className={`h-16  ${i % 2 == 0 ? 'bg-[#FFF7F7]' : ''}`}>
+        <tr key={i} className={`h-20  ${i % 2 == 0 ? 'bg-[#FFF7F7]' : ''}`}>
           <td className='w-[50px] whitespace-pre-wrap'>
             {dex?.duration}
           </td>
