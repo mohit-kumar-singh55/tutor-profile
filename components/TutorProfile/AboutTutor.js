@@ -14,7 +14,7 @@ function AboutTutor() {
       </main>
 
       {/* mainContainer For lg deivces */}
-      <main className='lg:hidden flex flex-col items-start justify-center md:gap-8 gap-3'>
+      <main className='lg:hidden flex flex-col items-start justify-center md:gap-6 gap-3'>
         <DescriptionPhone />
         <VideoPhone />
       </main>
@@ -122,7 +122,7 @@ function VideoPhone(props) {
   // overflow-hidden  rounded-xl bg-gradient-to-r from-[#FD4E6D] to-[#FDA02F] p-1
   return (
     <div className="mx-auto flex w-full h-auto flex-col gap-4 sm:w-[467px] md:w-auto ">
-      <div className="md:white-linear-gradient rounded-lg bg-gradient-to-r from-[#FD4E6D] to-[#FDA02F]  p-1.5 sm:h-[302px] sm:w-[467px] h-[200px] md:rounded-xl  ">
+      <div className="md:white-linear-gradient rounded-lg bg-gradient-to-r from-[#FD4E6D] to-[#FDA02F]  p-1.5 md:h-[302px] sm:w-[467px] h-[200px] md:rounded-xl  ">
         <div className="relative order-2 flex h-full w-full  items-center justify-center   overflow-hidden   rounded-xl  md:order-1     ">
           {/* <div className="relative order-2 flex items-center justify-center   overflow-hidden   rounded-xl  md:order-1 md:h-[486px] md:w-[430px]    "> */}
           {/* <Image

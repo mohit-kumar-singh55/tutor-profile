@@ -40,7 +40,7 @@ function BackgroundFullImg({ user_data }) {
     <div className="absolute top-0 -z-30  h-full  w-full ">
       <Image
         priority
-        src={`https://akbh.s3.ap-south-1.amazonaws.com/skillshare/user/profile_img/${user_data.background_pic}`}
+        src={`https://akbh.s3.ap-south-1.amazonaws.com/skillshare/user/profile_img/${user_data?.background_pic}`}
         layout="fill"
         objectFit="cover"
       />
@@ -50,9 +50,9 @@ function BackgroundFullImg({ user_data }) {
 function AndrewSmith({ user_data }) {
   return (
     <div className="-mt-20 space-y-4 text-center font-bold capitalize text-white ">
-      <div className=" -ml-8 text-sm tracking-[0.175em]">{user_data.headline}</div>
+      <div className=" -ml-8 text-sm tracking-[0.175em]">{user_data?.headline}</div>
       <h1 className=" flex gap-[17px] text-3xl">
-        <span> {user_data.name}</span>
+        <span> {user_data?.name}</span>
         <div className="inline-block h-[21px] w-[21px]">
           <Image
             src={'/Images/TutorProfile/svg/right-ok.svg'}
@@ -75,10 +75,10 @@ function AndrewSmith({ user_data }) {
 function ProfileImgAndQualifications({ user_data }) {
   return (
     <div className="mx absolute -bottom-20 mx-16 flex items-center justify-center gap-2">
-      <ProfileImg profile_img={user_data.profile_img} />
+      <ProfileImg profile_img={user_data?.profile_img} />
       <div className="w-52  capitalize">
         <p className="mt-2 mb-5 text-sm font-[600] tracking-[.065em] text-white">
-          {user_data.teaching_experience}
+          {user_data?.teaching_experience}
         </p>
         <TutorDescription user_data={user_data} />
       </div>
@@ -105,7 +105,7 @@ function TutorDescription({ user_data }) {
         <div className="   ml-[-4px]  mr-[5px] flex justify-center">
           <FiMessageCircle className="text-sm" />
         </div>
-        <span>Speaks {user_data.language_spoken.map(function (elem) {
+        <span>Speaks {user_data?.language_spoken.map(function (elem) {
           return elem.language;
         }).join(", ")} </span>
       </div>

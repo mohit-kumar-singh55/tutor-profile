@@ -13,7 +13,7 @@ function TutorProfile() {
       <TutorHeroPage />
       <Reviews />
       <AboutTutor />
-      {/* <Schedule /> */}
+      <Schedule />
       <Resume />
       <TutorFooter />
     </div>
