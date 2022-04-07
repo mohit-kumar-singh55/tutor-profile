@@ -14,7 +14,7 @@ function AboutTutor() {
       </main>
 
       {/* mainContainer For lg deivces */}
-      <main className='lg:hidden flex flex-col items-center justify-center md:gap-8 gap-3'>
+      <main className='lg:hidden flex flex-col items-start justify-center md:gap-8 gap-3'>
         <DescriptionPhone />
         <VideoPhone />
       </main>
