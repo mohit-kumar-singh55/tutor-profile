@@ -73,7 +73,7 @@ const LinksAndLogo = () => {
             </div>
 
             {/* visible in small devices */}
-            <div className='flex sm:hidden items-center justify-around gap-4 flex-wrap flex-col w-[80%] mx-auto font-monts font-semibold text-[#2E2E2E]'>
+            <div className='flex sm:hidden items-center justify-around gap-8 flex-wrap flex-col w-[80%] mx-auto font-monts font-semibold text-[#2E2E2E]'>
                 {/* logo center */}
                 <div className='relative cursor-pointer w-[200px] h-[50px]'>
                     <Link href='/'>
