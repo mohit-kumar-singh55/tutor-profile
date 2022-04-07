@@ -18,7 +18,7 @@ export default function TutorHeroPage() {
       </div>
 
       {/* Profession */}
-      <p className='absolute w-full text-center -bottom-6 font-poppins font-semibold text-[100px] text-[#424242] uppercase opacity-50 tracking-[25px]'>
+      <p className='hidden lg:block absolute w-full text-center -bottom-6 font-poppins font-semibold text-[100px] text-[#424242] uppercase opacity-50 tracking-[25px]'>
         <span className='text-[#FFFFFF]'>
           Professional
         </span> chef
@@ -28,7 +28,7 @@ export default function TutorHeroPage() {
       <ProfileChip />
 
       {/* main */}
-      <div className='flex items-center gap-8 pl-16'>
+      <div className='flex items-center gap-8 lg:pl-16 pl-8'>
         <UserImage />
         <ProfilePhotoPopUp />
       </div>
@@ -53,7 +53,7 @@ const BackgroundImg = () => {
 
 const UserImage = () => {
   return (
-    <div className='relative w-[280px] h-[280px] rounded-lg'>
+    <div className='relative lg:w-[280px] lg:h-[280px] w-[200px] h-[200px] rounded-lg'>
       {/* camera */}
       <div className='absolute z-[1] top-[15px] right-[15px] cursor-pointer'>
         <div className='relative w-[27.5px] h-[22.5px]'>
@@ -79,7 +79,7 @@ const UserImage = () => {
 
 const ProfileChip = () => {
   return (
-    <div className='flex items-center justify-between absolute bottom-[100px] left-[60px] sm:w-[300px] sm:-h-[60px] w-[216px] h-[40px] bg-[#FFFFFF] rounded-full px-4 py-2 font-roboto shadow-xl'>
+    <div className='flex items-center justify-between absolute lg:bottom-[100px] bottom-[60px] left-[60px] sm:w-[300px] w-[216px] h-[40px] bg-[#FFFFFF] rounded-full px-4 py-2 font-roboto shadow-xl'>
       <div>
         <svg width="5" height="20" viewBox="0 0 5 29" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="2.5" cy="2.5" r="2.5" fill="#FC4D6D" />

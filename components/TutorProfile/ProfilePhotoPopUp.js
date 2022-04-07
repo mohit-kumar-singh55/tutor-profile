@@ -4,14 +4,14 @@ import WhatsAppTree from "../../icons/WhatsAppTree";
 
 const ProfilePhotoPopUp = () => {
     return (
-        <div className='flex flex-col p-6 items-center justify-center gap-10 bg-[#FFFFFF] w-[640px] h-[350px] relative font-roboto rounded-xl shadow-2xl'>
+        <div className='flex flex-col p-6 items-center justify-center gap-10 bg-[#FFFFFF] lg:w-[640px] lg:h-[350px] w-[500px] h-[300px] relative font-roboto rounded-xl shadow-2xl'>
             <WhatsAppTree styles='absolute' />
 
             <div className='flex flex-col items-center justify-between h-full w-full'>
                 {/* Title and CrossButton */}
                 <TopTitle />
 
-                <div className='flex items-end justify-between w-full'>
+                <div className='flex items-end justify-between w-full gap-2'>
                     {/* Upload Box */}
                     <UploadBox />
 
@@ -33,7 +33,7 @@ export default ProfilePhotoPopUp;
 const TopTitle = () => {
     return (
         <div className='flex w-full justify-between items-center pl-2'>
-            <p className='font-bold text-2xl text-[#3F3F3F]'>Upload Cover Photo</p>
+            <p className='font-bold lg:text-2xl text-lg text-[#3F3F3F]'>Upload Cover Photo</p>
             <span onClick={() => setOpenPopUp({ ...false, walletPopUp: false })}>
                 <CrossIcon />
             </span>
@@ -45,7 +45,7 @@ const TopTitle = () => {
 // Upload Box
 const UploadBox = () => {
     return (
-        <div className='flex items-center justify-center w-[240px] h-[240px] border-[0.8px] border-[#7E7E7E] border-dashed'>
+        <div className='flex items-center justify-center lg:w-[240px] lg:h-[240px] w-[200px] h-[200px] border-[0.8px] border-[#7E7E7E] border-dashed'>
             <div className='flex items-center gap-3 flex-col text-center font-bold'>
                 <p className='text-[#838383] text-[14px]'>
                     Drag And Drop Your Photo Here
@@ -67,7 +67,7 @@ const UploadBox = () => {
 // Buttons
 const Buttons = ({ label, styles }) => {
     return (
-        <button className={`w-[156.29px] h-[42.59px] text-center rounded-lg ${styles}`}>
+        <button className={`lg:w-[156.29px] lg:h-[42.59px] w-[125px] h-[30px] text-center rounded-lg ${styles}`}>
             {label}
         </button>
     )
