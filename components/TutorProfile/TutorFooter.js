@@ -7,7 +7,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const TutorFooter = () => {
     return (
-        <div className='snap-fullPage h-[calc(100vh-79px)] flex flex-col items-center justify-evenly bg-[#FFF7F7]'>
+        <div className='snap-fullPage h-[calc(100vh-79px)] flex flex-col items-center justify-center gap-14 bg-[#FFF7F7]'>
             <LinksAndLogo />
 
             {/* divider */}
