@@ -14,7 +14,7 @@ function AboutTutor() {
       </main>
 
       {/* mainContainer For lg deivces */}
-      <main className='lg:hidden flex flex-col items-center justify-center gap-8'>
+      <main className='lg:hidden flex flex-col items-center justify-center md:gap-8 gap-3'>
         <DescriptionPhone />
         <VideoPhone />
       </main>
@@ -121,13 +121,8 @@ function Video(props) {
 function VideoPhone(props) {
   // overflow-hidden  rounded-xl bg-gradient-to-r from-[#FD4E6D] to-[#FDA02F] p-1
   return (
-    <div className=" mx-auto  flex w-full h-auto  flex-col gap-4 sm:w-[467px] md:w-auto ">
-      <button
-        className="rounded-lg border-2 border-[#FC4D6D] py-1.5  text-center text-lg font-semibold capitalize text-[#FC4D6D] md:order-2 md:text-[22px]">
-        send message
-      </button>
-
-      <div className="md:white-linear-gradient rounded-lg bg-gradient-to-r  from-[#FD4E6D] to-[#FDA02F]  p-1.5 sm:h-[302px] sm:w-[467px] h-[302px] md:rounded-xl  ">
+    <div className="mx-auto flex w-full h-auto flex-col gap-4 sm:w-[467px] md:w-auto ">
+      <div className="md:white-linear-gradient rounded-lg bg-gradient-to-r from-[#FD4E6D] to-[#FDA02F]  p-1.5 sm:h-[302px] sm:w-[467px] h-[200px] md:rounded-xl  ">
         <div className="relative order-2 flex h-full w-full  items-center justify-center   overflow-hidden   rounded-xl  md:order-1     ">
           {/* <div className="relative order-2 flex items-center justify-center   overflow-hidden   rounded-xl  md:order-1 md:h-[486px] md:w-[430px]    "> */}
           {/* <Image
@@ -164,6 +159,10 @@ function VideoPhone(props) {
           </div>
         </div>
       </div>
+
+      <button className="rounded-lg border-2 border-[#FC4D6D] py-1.5 text-center text-lg font-semibold capitalize text-[#FC4D6D] md:order-2 md:text-[22px]">
+        send message
+      </button>
     </div>
   )
 }
@@ -207,7 +206,7 @@ const Description = () => {
 // for md and sm devices
 const DescriptionPhone = () => {
   return (
-    <div className='flex flex-col items-end justify-between gap-3 h-full sm:w-[467px] w-full font-roboto'>
+    <div className='flex flex-col items-end justify-between md:gap-3 gap-2 h-full sm:w-[467px] w-full font-roboto'>
       {/* Edit Button */}
       <button className='flex items-center justify-center gap-3 font-semibold text-[#FC4D6D]'>
         <span className='w-5'>
@@ -224,17 +223,16 @@ const DescriptionPhone = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dapibus dignissim elit rutrum cras tincidunt. Aliquet quis et, elit ultricies aliquam. Pulvinar sagittis enim, id amet cursus amet. Lectus auctor velit vitae commodo. Tincidunt senectus tincidunt ac et pellentesque turpis nulla morbi.
         </p>
       </article>
+
+      {/* Buttons */}
+      <div className='flex items-center w-full sm:justify-evenly justify-between font-poppins'>
+        <button className='w-[205px] h-[45px] rounded-full text-center bg-[#FC4D6D] text-white font-bold shadow-xl tracking-wider'>
+          Book Trail Session
+        </button>
+        <p className='font-semibold text-[#565656]'>
+          Rs.999/hr
+        </p>
+      </div>
     </div>
   )
 }
-
-
-// {/* Buttons */}
-// <div className='flex items-center w-full sm:justify-evenly justify-between font-poppins'>
-// <button className='w-[205px] h-[45px] rounded-full text-center bg-[#FC4D6D] text-white font-bold shadow-xl tracking-wider'>
-//   Book Trail Session
-// </button>
-// <p className='font-semibold text-[#565656]'>
-//   Rs.999/hr
-// </p>
-// </div>
